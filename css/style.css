@@ -35,7 +35,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: var(--bg-color);
     padding: 22px 15px;
     border-bottom: 1px solid transparent;
     transition: all 0.45s ease;
