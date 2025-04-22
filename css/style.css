@@ -80,8 +80,7 @@ section{
 }
 
 .home{
-    position: relative;
-    height: 100vh;
+    height: 85vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -228,8 +227,8 @@ section{
     transition: all 0.45s ease;
 }
 
-.skills-content .box:nth-child(3){
-    padding : 35px 45px;
+.skills-content .box:nth-child(3) h3{
+    width: 70%;
 }
 .s-icons i{
     font-size: 32px;
@@ -252,7 +251,7 @@ section{
 }
 .portfolio-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     align-items: center;
     gap: 2.5rem;
     margin-top: 5rem;
@@ -284,12 +283,13 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 0 40px;
     transition: height 0.5s;
 }
 
 .layer h5 {
-    font: 20px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -475,7 +475,7 @@ form textarea {
     }
 
     section {
-        padding: 110px 3% 60px;
+        padding: 60px 3% 60px;
     }
 
     .end {
@@ -492,48 +492,40 @@ form textarea {
     .home-text h3{
         font-size: 2.5rem;
     }
-    .home{
-        height: 87vh;
-    }
 }
 @media (max-width:920){
     .about{
         grid-template-columns: 1fr;
 
     }
-    .about-img img{
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
+    
     .contact{
         grid-template-columns: 1fr;
     }
 }
 @media (max-width: 480px){
-    #menu-icon{
-        display: block;
-    }
-    .navlist{
+    .navlist {
         position: absolute;
-        top: -1000px;
-        right: 0;
-        left: 0;
-        display: flex;
+        top: 80px;
+        right: -100%;
+        width: 200px;
+        background: #fff;
         flex-direction: column;
-        background: var(--bg-color);
-        text-align: left;
-        transition: all .45s ease;
-
-    }
-    .navlist a{
-        display: block;
-        margin: 17px;
-        font-size: 20px;
-        transition: all .45s ease;
-        color: var(--text-color);
-
-    }
+        padding: 1rem;
+        transition: 0.3s;
+        display: flex;
+      }
+    
+      .navlist.open {
+        right: 0;
+      }
+    
+      #menu-icon {
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1001;
+      }
+    
     .navlist a:hover{
         color: var(--main-color);
     }
@@ -552,12 +544,14 @@ form textarea {
 
     .home{
         display: flex;
+        gap: 5%;
         flex-direction: column;
     }
 
     .img{
         flex: 1;
-        margin: 20px 20px;
+        border: none;
+        ;
     }
 
     .img img{
@@ -570,8 +564,17 @@ form textarea {
         transition: all .45s ease;
         object-fit: cover;
         padding: 20px;
+        position: relative;
+        z-index: 0;
     }
-
+    .title{
+        background-color: var(--bg-color);
+        position: relative;
+        z-index: 1;
+        background: #2A2A2A;
+background: linear-gradient(0deg, rgba(42, 42, 42, 1) 34%, rgba(42, 42, 42, 0.79) 60%, rgba(255, 253, 247, 0) 100%);
+        padding: 1rem;
+    }
     .about{
         display: flex;
          flex-direction: column;
@@ -585,4 +588,9 @@ form textarea {
      .about-text p{
         text-align: justify;
      }
+}
+@media (max-width: 320px){
+    .img{
+        display: none;
+    }
 }

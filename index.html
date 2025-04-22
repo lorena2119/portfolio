@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorena's Portfolio</title>
+    <script type="module" src="main.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
@@ -11,13 +12,13 @@
     <header>
         <a href="#" class="logo">Lorena</a>
         <ul class="navlist">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#portfolio" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="bx bx-menu" id="menu-icon"  onclick="toggleMenu()"></div>
     </header>
     
     <section class="home" id="home">
@@ -44,8 +45,11 @@
             <img src="img/WhatsApp Image 2025-04-20 at 4.00.14 PM.jpeg" alt="">
         </div>
         <div class="about-text">
-            <h2>About <span>Me</span></h2>
+            <div class="title">
+                <h2>About <span>Me</span></h2>
             <h4>Software Developer!</h4>
+            </div>
+            
             <p>
                 A highly motivated and innovative individual with 2 years experience in developing technological solutions
 through academic projects. Lorena demonstrated the ability to analyze problems and create user-friendly
@@ -93,7 +97,7 @@ digital solutions. Strong skills in teamwork, observation, and fast learning.
                 </div>
                 <h3>Methodologies & Tools</h3>
                 <ul>
-                    <li>‎ </li>
+                    
                     <li>Scrum</li>
                     <li>Git</li>
                     <li>GitHub</li>
@@ -109,11 +113,11 @@ digital solutions. Strong skills in teamwork, observation, and fast learning.
         </div>
         <div class="portfolio-content">
             <div class="row">
-                <img src="img/project1.jpg" >
+                <img src="img/hangman1.jpeg" >
                 <div class="layer">
-                    <h5>Visual Design</h5>
-                    <p>Check out 10 best Design's updates for the top web design & development compaines.</p>
-                    <a href="#"> <i class='bx bx-link-external'></i></a>
+                    <h5>Hangman Game</h5>
+                    <p>Check out a simple game made with HTML, CSS and JavaScript.</p>
+                    <a href="https://github.com/lorena2119/events.git"> <i class='bx bx-link-external'></i></a>
                 </div>
             </div>
     
@@ -124,9 +128,9 @@ digital solutions. Strong skills in teamwork, observation, and fast learning.
                     <p>Check out 10 best Design's updates for the top web design & development compaines.</p>
                     <a href="#"> <i class='bx bx-link-external'></i></a>
                 </div>
-            </div>
+            </div> 
     
-            <div class="row">
+            <!-- <div class="row">
                 <img src="img/project3.jpg" >
                 <div class="layer">
                     <h5>Visual Design</h5>
@@ -160,7 +164,7 @@ digital solutions. Strong skills in teamwork, observation, and fast learning.
                     <p>Check out 10 best Design's updates for the top web design & development compaines.</p>
                     <a href="#"> <i class='bx bx-link-external'></i></a>
                 </div>
-            </div>
+            </div> --> 
         </div>
     </section>
 
